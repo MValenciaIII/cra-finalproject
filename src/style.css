@@ -1,0 +1,86 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+.nav ul{
+
+    margin: 7% 0%;
+    list-style: none;
+}
+
+.nav li {
+
+    display: inline;
+    padding: 0px 10px;
+    color: white ;
+}
+
+header h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 7% 0%;
+    color: rgb(255, 255, 255);
+}
+
+header {
+    background-color: rgb(74, 148, 218);
+}
+
+.heroBackground {
+    background-color: rgba(135, 209, 50, 0.712);
+
+}
+
+
+
+.heroText {
+    text-align: center;
+    color: white;
+}
+
+.heroTextMid {
+    text-align: center;
+    color: white;
+}
+
+.description {
+    background-color: #f8f8ff ;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.create {
+    background-color: #f8f8ff ;
+    padding-bottom: 50px;
+}
+
+.aboutUsHero {
+    padding: 7% 0;
+    background-image: url(../src/media/aboutus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.myself img{
+    border-radius: 60%;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgb(20, 59, 95);
+    color: white;
+    
+}
+
+footer h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 7% 0%;
+    color: rgb(255, 255, 255);
+
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    padding: 3px 0px;
+}
