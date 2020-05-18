@@ -4,6 +4,7 @@ import Header from './Header';
 import Main from './Main';
 import About from './About'
 import Createform from './Createform'
+import Contact from './Contact'
 import Footer from './Footer';
 
 
@@ -16,6 +17,7 @@ const App = () => {
               <Route path="/" component={Main} exact />
               <Route path="/about" component={About} />
               <Route path="/create" component={Createform} />
+              <Route path="/contact" component={Contact} />
           </Switch> 
         <Footer />
       </>

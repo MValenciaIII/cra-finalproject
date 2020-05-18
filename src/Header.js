@@ -18,9 +18,10 @@ const Header = () => {
                                 <li>
                                     <Link to="/create">Create a form</Link>
                                 </li>
-                                <li>Contact</li>
-                                <li>Lorem</li>
-                                <li>Lorem</li>
+                                <li>
+                                    <Link to="/contact">Contact</Link>
+                                </li>
+                                
                             </ul>
                         </div>
                     </div>

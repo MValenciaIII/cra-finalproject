@@ -1,10 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import heroImg from './media/HeroImg.png'
 import linePeople from './media/LineofHappyPeople.jpg'
 import family from './media/Family.jpg'
 import ManLaptop from './media/MansittingLaptop.jpg'
 
 function Main() {
+    const [hero, setHero] = useState([]);
+    const [boxOne, setBoxOne] = useState([]);
+    const [boxTwo, setBoxTwo] = useState([]);
+    const [boxThree, setBoxThree] = useState([]);
+
+
+    useEffect(() => {
+        fetch("http://localhost:3030/api/main/hero")
+        .then(response => response.json())
+        .then(hero => {
+            setHero(hero);
+        });
+        
+        fetch("http://localhost:3030/api/main/descriptionOne")
+        .then(response => response.json())
+        .then(boxOne => {
+            setBoxOne(boxOne);
+        });
+
+        fetch("http://localhost:3030/api/main/descriptionTwo")
+        .then(response => response.json())
+        .then(boxTwo => {
+            setBoxTwo(boxTwo);
+        });
+
+        fetch("http://localhost:3030/api/main/descriptionThree")
+        .then(response => response.json())
+        .then(boxThree => {
+            setBoxThree(boxThree);
+        });
+    }, []);
     return (
         <>
             <main>
@@ -12,8 +43,8 @@ function Main() {
                     <div className="container">
                         <div className="wall row">
                             <div className=" col-sm-5 ">
-                                <h1>Start free creating a form for yourself here!</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at suscipit dui, vitae ultricies elit. Curabitur tincidunt vestibulum felis, at semper metus tempor id.</p>
+                                <h1>{hero.title}</h1>
+                                <p>{hero.body}</p>
                                 <button>Sign up Free!</button>
                             </div>
                             <div className=" col-sm-7 ">
@@ -22,9 +53,7 @@ function Main() {
                         </div>
                         <div className="row">
                             <div className="col-sm-pull-1 col-sm-10 col-sm-push-1">
-                                <p className='heroText'>lorem epson</p>
-                                <h3 className='heroTextMid'>lorem</h3>
-                                <p className='heroText'>lorem epson</p>
+                               
                             </div>
                         </div>
                     </div>
@@ -40,12 +69,12 @@ function Main() {
                                 </div>
                                 <div className="row">
                                     <div className="col-sm-12">
-                                        <h2>Create a form from Anywhere!</h2>
+                                        <h2>{boxOne.title}</h2>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-sm-12">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at suscipit dui, vitae ultricies elit. Curabitur tincidunt vestibulum felis, at semper metus tempor id. Cras pretium hendrerit odio nec laoreet. Praesent feugiat urna eros, sit amet placerat magna varius sed. </p>
+                                        <p>{boxOne.body} </p>
                                     </div>
                                 </div>
                             </div>
@@ -57,12 +86,12 @@ function Main() {
                                 </div>
                                 <div className="row">
                                     <div className="col-sm-12">
-                                        <h2>Use these forms to survey people's opinion for anything!</h2>
+                                        <h2>{boxTwo.title}</h2>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-sm-12">
-                                        <p>Nullam mollis nibh eros. Cras in risus nec leo mollis dignissim. Aliquam ac sapien sapien. Vivamus tempor arcu vel lacus tincidunt, sit amet hendrerit purus dapibus. Maecenas eget ornare nibh. Sed lacus magna, luctus at felis at, dignissim consectetur arcu. </p>
+                                        <p>{boxTwo.body} </p>
                                     </div>
                                 </div>
                             </div>
@@ -74,12 +103,12 @@ function Main() {
                                 </div>
                                 <div className="row">
                                     <div className="col-sm-12">
-                                        <h2>We want you to be part of our familia!</h2>
+                                        <h2>{boxThree.title}</h2>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-sm-12">
-                                        <p>Proin aliquet elit quis euismod consequat. Nunc tristique, odio sit amet elementum venenatis, libero justo fermentum sapien, in interdum quam massa in tellus. Pellentesque a nisi nec enim interdum porttitor. Etiam quis tellus et purus efficitur hendrerit. Quisque sit amet egestas urna. </p>
+                                        <p>{boxThree.body} </p>
                                     </div>
                                 </div>
                             </div>

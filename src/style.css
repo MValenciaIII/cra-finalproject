@@ -56,12 +56,32 @@ header {
     padding: 7% 0;
     background-image: url(../src/media/aboutus.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 
 .myself img{
     border-radius: 60%;
     margin-bottom: 20px;
+}
+
+.inputFill {
+    margin: 1% 0;
+}
+
+.contactFirst input{
+    width: 100%;
+}
+
+.contactSecond input{
+    width: 100%;
+
+}
+
+.contactThird input {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 3%;
 }
 
 footer {
@@ -83,4 +103,11 @@ footer ul {
 
 footer li {
     padding: 3px 0px;
+}
+
+.boxDetail {
+    background-color: ghostwhite;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+         box-shadow: 0 10px 6px -6px #777;
 }
